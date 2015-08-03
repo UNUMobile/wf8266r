@@ -26,7 +26,7 @@
 
 PS:我們另外準備了進階的課程， 請參考 Meet Arduino IDE
 
-```
+```javascript
 <wf8266r-button type="腳位類型" pin="編號" value="值">說明</wf8266r-button>```
 
 type
@@ -43,11 +43,12 @@ type
 
 現在 LED 已經亮燈了, 再加一個按鍵把它關了吧. 只要將 value 改為 0 即可
 
-```<wf8266r-button type="gpio" pin="5" value="0">關閉</wf8266r-button>```
+```javascript
+<wf8266r-button type="gpio" pin="5" value="0">關閉</wf8266r-button>```
 
 
 ## 完整範例
-```
+```javascript
 <!doctype html>
 <html>
 <head>
