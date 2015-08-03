@@ -1,3 +1,3 @@
 {
-    plugins: ["gitbook-plugin-youtubex"]
+    plugins: ["youtubex"]
 }
