@@ -26,8 +26,9 @@
 
 PS:我們另外準備了進階的課程， 請參考 Meet Arduino IDE
 
-```javascript
-<wf8266r-button type="腳位類型" pin="編號" value="值">說明</wf8266r-button>```
+```html
+<wf8266r-button type="腳位類型" pin="編號" value="值">說明</wf8266r-button>
+```
 
 type
 
@@ -38,17 +39,19 @@ type
 
 當我希望按下時將 PIN5 腳輸出高電位, 這樣會使 LED 燈起, 我只要定義如下 TAG
 
+```html
+<wf8266r-button type="gpio" pin="5" value="1">打開 LED</wf8266r-button>
 ```
-<wf8266r-button type="gpio" pin="5" value="1">打開 LED</wf8266r-button>```
 
 現在 LED 已經亮燈了, 再加一個按鍵把它關了吧. 只要將 value 改為 0 即可
 
-```javascript
-<wf8266r-button type="gpio" pin="5" value="0">關閉</wf8266r-button>```
+```html
+<wf8266r-button type="gpio" pin="5" value="0">關閉</wf8266r-button>
+```
 
 
 ## 完整範例
-```javascript
+```html
 <!doctype html>
 <html>
 <head>
@@ -75,7 +78,8 @@ type
     <wf8266r-button type="gpio" pin="5" value="1">打開 LED</wf8266r-button>
     <wf8266r-button type="gpio" pin="5" value="0">關閉</wf8266r-button>
 </body>
-</html>```
+</html>
+```
 
 
 ## 線上練習
