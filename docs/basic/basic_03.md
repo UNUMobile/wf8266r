@@ -10,18 +10,20 @@ PWM : Pulse Width Modulation, [脈衝寬度調變](https://zh.wikipedia.org/wiki
 ## 程式
 上個單元我們透過 type="gpio" 來控制輸出, 這次我們要換成 type="pwm" 來控制流量, 先來看看定義
 
-```javascript
-<wf8266r-button id="控制編號" type="pwm" pin="腳位" value="預設值">顯示名稱</wf8266r-button>```
+```html
+<wf8266r-button id="控制編號" type="pwm" pin="腳位" value="預設值">顯示名稱</wf8266r-button>
+```
 
 當我希望控制 PIN5 腳輸出的流量時, 我只要定義如下 TAG
 
-```javascript
-<wf8266r-button type="pwm" pin="5" value="0">LED 亮度調整</wf8266r-button>```
+```html
+<wf8266r-button type="pwm" pin="5" value="0">LED 亮度調整</wf8266r-button>
+```
 
 
 ## 完整範例
 
-```javascript
+```html
 <!doctype html>
 <html>
 <head>
