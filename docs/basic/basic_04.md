@@ -8,7 +8,7 @@ RGB LED 燈的腳位由圖片上左到右分別是 Blue(藍) Green(綠) Common(�
 
 
 ## 材料
-![](04_LightColor_300_1.jpg)
+
 * RGB LED x 1
 * WF8266R x 1
  
