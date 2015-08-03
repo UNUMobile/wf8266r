@@ -4,7 +4,7 @@
 
 
 ## WF8266R
-![](intro242.jpg)
+![](../images/intro242.jpg)
 
 * WF8266R Dev-Board
 * WF8266T LED
