@@ -16,4 +16,3 @@ WF8266R由台灣通聯行動創意科技有限公司設計發展, 其核心晶�
 * 2ms 之内唤醒並開始傳送資料
 * 待機狀態消耗功率少於 1.0mW (DTIM3)
 
-{%youtube%}wEqeD4j4Lbg{%endyoutube%}
