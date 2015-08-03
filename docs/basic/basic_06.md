@@ -79,6 +79,3 @@ WF8266R 可透過 GPIO.serialWrite 或是加上 換行 GPIO.serialWriteln 這二
 
 [點我查看範例](http://code.unumobile.com/wf8266r/Default?templateName=06_SerialWrite.html) 我們試著將 I am WF8266R. 這個字串送到電腦, 會發現空白變成了 %20, 這是 因為線上測試平台的安全性編碼, 目前版本已自動轉換，所以不會再看到%20.
 [![](06_Serial_3.jpg)](http://code.unumobile.com/wf8266r/Default?templateName=06_SerialWrite.html)
-
-## 線上練習
-
