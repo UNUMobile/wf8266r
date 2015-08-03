@@ -78,5 +78,5 @@ type
 
 
 ## 線上練習
-
+請點圖片進入線上練習平台，試著改改 pin 的數字 
 [![](02_Light_final.jpg)](http://code.unumobile.com/wf8266r/Default?templateName=02_Light.html)
