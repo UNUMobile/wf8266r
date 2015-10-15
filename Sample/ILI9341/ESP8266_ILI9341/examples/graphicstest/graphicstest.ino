@@ -25,6 +25,8 @@ ESP8266_ILI9341 tft = ESP8266_ILI9341();
 
 void setup() {
   pinMode(5,OUTPUT);
+  pinMode(16,OUTPUT);
+  digitalWrite(16,HIGH);
 
   Serial.begin(115200);
   Serial.println("ILI9341 Test!"); 
