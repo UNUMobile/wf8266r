@@ -6,9 +6,13 @@ var GPIO = {
     websocketClose:false,
     websocket: false,
     connection: null,
-    init: function (ip) {
-        if (ip != null)
-            GPIO.ip = this.ip;
+    init: function (myIP, isWS) {
+        if (myIP != null) {
+            GPIO.ip = myIP;
+            if (isWS == null)
+                isWS = true;
+            GPIO.websocket = isWS;
+        }
         else {
             GPIO.ip = $("unu-wf8266r").attr("ip");
             var websocket = $("unu-wf8266r").attr("websocket");
@@ -74,6 +78,9 @@ var GPIO = {
     },
     dht11: function (n, callback) {
         this.togglePin("dht11", n, "", callback);
+    },
+    dht: function (pin, type, callback) {
+        this.togglePin("dht", "pin", pin, callback, "type", type);
     },
     distance: function(echo, trig, callback){
         this.togglePin("distance", "echo", echo, callback, "trig", trig);
@@ -200,7 +207,7 @@ function connectWebsocket() {
 
     GPIO.connection.onerror = function (error) {
         console.log('WebSocket Error ', error);
-        $("body").append("<span>請更新 WF8266R Firmware Ver 2015.07.24</span>");
+        $("body").append("<span>連線失敗, 請檢查 FM 版本或設定</span>");
     };
 
     GPIO.connection.onclose = function (e) {
