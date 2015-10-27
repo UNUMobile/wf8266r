@@ -10,11 +10,14 @@ WF8266R 使用手冊
 ## WF8266R 特色
 
 
-* 線上教學平台， 強化學習互動，每個單元下方都有互動討論區，立即取得協助
+* 線上教學平台， 持續更新
+* 支援 IFTTT， ThingSpeak 等平台
 * 提供多樣化的 API 及 雲端服務平台
-* 使用 WEB 開發技術 HTML5, Javascript, CSS, WebSocket 操作 WF8266R
-* 進階 MAKER 可以使用 Arduino IDE 開發 WF8266R, 就像開發 Arduino 一樣, 無痛轉換
-* 可加掛 BLE4.0 模組，實現 iBeacon
-* WF8266R 使用 序列 Rx Tx 可和其他設備 如：藍芽 Arduino 等等進行資料交換
-* 直接掛載於 2 或 4 路繼電器, 透過 事件 指定實現 定時 延遲 自鎖 循環 等任意組合
-* 專用的手機 App 支援 iOS 和 Android
+* 可使用 WEB 開發技術 HTML5, Javascript, Web Socket, MQTT 操作 WF8266R
+* 進階使用 Arduino IDE 開發 WF8266R, 就像開發 Arduino 一樣, 無痛轉換
+* 可加掛 BLE4.0 模組，實現 iBeacon 透過 WF8266R 使用
+* 序列 Rx Tx 可和其他設備 如：藍芽 Arduino 等等進行資料交換透過 * WF8266R App (iOS, Android, Web) 讓你隨時隨地任意平台，完全掌握 WF8266R
+* 透過排程事件可自訂行為組合實現 定時 延遲 自鎖 循環 等任意組合
+* 主要區網操作 安全 自主性高 不需被綁住 不需建立 SERVER 智慧插座功能提供 MQTT 協定
+* 混合式的 WEB 開發，可用 WEB Socket + WebAPIs ＋ MQTT 針對大資料和一般要求混用適合協定
+* 雙 ID 認證，安全性高
