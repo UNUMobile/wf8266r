@@ -9,20 +9,26 @@
      [" ", "腳位 %m.gpio 類比輸出 %n", "pwm", 5, 1023],
      [" ", "DHT%m.dhtType 溫濕度感測器，接在腳位 %m.gpio" ,"dht", 11,12],
      [" ", "DS18B20 溫度感測器，接在腳位 %m.gpio" ,"ds", 4],
+     [" ", "UART 速率 %m.uartBaud" ,"baud", "115200"],
      [" ", "HCSR 超音波感測器，Echo 在腳位 %m.gpio Trig 在腳位 %m.gpio" ,"distance", 5,4],
      [" ", "UART Tx 送出 %m.uartCode %s 結尾換行 %m.boolType" ,"tx", "text", "Hi", "true"],
-     [" ", "HTTP POST 資料 %s 到 %s %s" ,"post", "key=xxxxxx&field1=1&field2=2", "api.thingspeak.com", "update"],
+     [" ", "%m.flushType 清空", "flush", "UART"],
+     [" ", "HTTP %m.restfulType 資料 %s 到 %s %s" ,"http", "POST", "key=xxxxxx&field1=1&field2=2","api.thingspeak.com", "update"],
+     [" ", "HTTP %m.restfulType 資料 %s 從 %s %s" ,"http", "GET", "api_key=EM18B52PSHXZB4DD", "api.thingspeak.com", "apps/thinghttp/send_request"],
      ["r", "讀取腳位 %m.gpio" ,"read", 5],
      ["r", "讀取感測器 %m.sensor 參數 %m.sensorParam" ,"sensor", "DHT", "C"],
      ["r", "ADC","adc"]
    ],
    "menus":{
     "mode":["INPUT","OUTPUT"],
-    "sensor":["DHT","DS","HCSR","Rx"],
+    "sensor":["DHT","DS","HCSR","Rx","RESTfulGET"],
     "sensorParam":["Value","C","F","H"],
     "dhtType":["11","22","21"],
+    "restfulType":["GET","POST"],
+    "flushType":["UART","RESTful"],
     "level":["0","1"],
     "uartCode":["text","hex"],
+    "uartBaud":["9600","19200","38400","57600","115200"],
     "boolType":["true","false"],
     "gpio":["5","4","12","13","14","15","16","0","1","2","3"]
    }
