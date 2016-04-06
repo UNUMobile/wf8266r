@@ -18,9 +18,9 @@
      [" ", "%m.flushType 清空", "flush", "UART"],
      [" ", "HTTP %m.restfulType 資料 %s 到 %s %s" ,"http", "POST", "key=xxxxxx&field1=1&field2=2","api.thingspeak.com", "update"],
      [" ", "HTTP %m.restfulType 資料 %s 從 %s %s" ,"http", "GET", "api_key=EM18B52PSHXZB4DD", "api.thingspeak.com", "apps/thinghttp/send_request"],
-     ["r", "讀取腳位 %m.gpio" ,"read", 5],
+     ["r", "讀取數位腳位 %m.gpio" ,"read", 5],
      ["r", "讀取感測器 %m.sensor 參數 %m.sensorParam" ,"sensor", "DHT", "C"],
-     ["r", "ADC","adc"]
+     ["r", "讀取類比腳位 ADC","adc"]
    ],
    "menus":{
     "mode":["INPUT","OUTPUT"],
