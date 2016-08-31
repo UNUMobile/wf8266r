@@ -5,12 +5,12 @@
 #include <SoftwareSerial.h>
 SoftwareSerial wf8266r(4, 5); // RX, TX
 const uint8_t maxLength = 255;
-const char* ssid = "UNUMoblie.com.1F";
-const char* password = "1234567890";
+const char* ssid = "your ap ssid";
+const char* password = "ap password";
 char inData[maxLength];
 char inChar = -1;
 byte index = 0;
-String apiKey = "UOBI6M3CKHHPJ7PL";
+String apiKey = "your key";
 
 void setup() {
   Serial.begin(9600);
