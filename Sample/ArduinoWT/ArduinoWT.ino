@@ -23,7 +23,7 @@ void sendValueToThingSpeak(int pm25, float temp)
 {
   char parameters[50]; //buffer
   sprintf(parameters, "&field1=%d&field2=%.2f", 
-  temp, pm25);
+  pm25, temp);
 
   wf8266r.println("WTPOST+HOST:api.thingspeak.com,PORT:80,URI:update.json,DATA:api_key=" + apiKey + String(parameters));
   Serial.print("Sent temp=");
