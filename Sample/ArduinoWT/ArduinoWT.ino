@@ -11,7 +11,7 @@ void setup() {
   wf8266r.begin(9600);
 
   Serial.println("Ready");
-  sendValueToThingSpeak(1);
+  sendValueToThingSpeak(30, 28.93);
 }
 
 void loop() {
@@ -19,14 +19,16 @@ void loop() {
     Serial.print((char)wf8266r.read());
 }
 
-void sendValueToThingSpeak(int value)
+void sendValueToThingSpeak(int temp, float pm25)
 {
   char parameters[150];
-  sprintf(parameters, "&field1=%d&field2=%d&field3=%d&field4=%d&field5=%d&field6=%d&field7=%d&field8=%d", 
-  value, value + 1, value + 2, value + 3, value + 4, value + 5, value + 6, value + 7);
+  sprintf(parameters, "&field1=%d&field2=%.2f", 
+  temp, pm25);
 
   wf8266r.println("WTPOST+HOST:api.thingspeak.com,PORT:80,URI:update.json,DATA:api_key=" + apiKey + String(parameters));
-  Serial.print("Sent ");
+  Serial.print("Sent temp=");
   Serial.print(value);
+  Serial.print(" pm2.5=");
+  Serial.print(pm25);
   Serial.println(" to thingspeak.com");
 }
