@@ -21,13 +21,13 @@ void loop() {
 
 void sendValueToThingSpeak(int temp, float pm25)
 {
-  char parameters[150];
+  char parameters[50]; //buffer
   sprintf(parameters, "&field1=%d&field2=%.2f", 
   temp, pm25);
 
   wf8266r.println("WTPOST+HOST:api.thingspeak.com,PORT:80,URI:update.json,DATA:api_key=" + apiKey + String(parameters));
   Serial.print("Sent temp=");
-  Serial.print(value);
+  Serial.print(temp);
   Serial.print(" pm2.5=");
   Serial.print(pm25);
   Serial.println(" to thingspeak.com");
