@@ -19,7 +19,7 @@ void loop() {
     Serial.print((char)wf8266r.read());
 }
 
-void sendValueToThingSpeak(int temp, float pm25)
+void sendValueToThingSpeak(int pm25, float temp)
 {
   char parameters[50]; //buffer
   sprintf(parameters, "&field1=%d&field2=%.2f", 
