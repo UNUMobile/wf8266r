@@ -12,7 +12,7 @@ byte index = 0;
 void setup() {
   Serial.begin(9600);
   wf8266r.begin(9600);
-
+  pinMode(13,OUTPUT);
   Serial.println("Ready");
 }
 
