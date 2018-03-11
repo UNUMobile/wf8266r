@@ -11,4 +11,6 @@ http://wf8266.com/wf8266r/tutorials/0A_WT
 ## 如何開始
 * STEP1 : 修改 php 目錄中的 db_config.php 的連線資訊和資料庫名稱
 * STEP2 : 修改 post.php 中 SQL INSERT 語法
+* STEP3 : 修改 Arduino 目錄中 ArduinoMySQL.ino 裡的 server 位址，這是你 php 程式服務的位址(IP)
+* STEP4 : 將修改好的 ArduinoMySQL.ino 更新到 Arduino 板子
 
