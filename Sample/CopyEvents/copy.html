@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <script>
+    function httpGet() {
+      var ip = document.getElementById("fromIP").value;
+      var xmlHttp = new XMLHttpRequest();
+      xmlHttp.open("GET", "http://" + ip + "/when", false);
+      xmlHttp.send(null);
+      copyTo(JSON.parse(xmlHttp.responseText));
+    }
+
+    function copyTo(obj) {
+      var ip = document.getElementById("toIP").value;
+      obj.events.forEach(function (event) {
+        createEvent(event);
+      });
+    }
+
+    function createEvent(event) {
+      var ip = document.getElementById("toIP").value;
+      var xmlHttp = new XMLHttpRequest();
+      var eventURI = "http://" + ip + "/when/listen?eventType=" + event.eventType + "&eventValue=" + event.eventValue + "&trigerType=" + event.trigerType + "&trigetValue=" + event.trigerValue + "&eventIndex=" + event.evnetIndex;
+      document.getElementById("log").appendChild(document.createTextNode(eventURI));
+      xmlHttp.open("GET", eventURI, false);
+      xmlHttp.send(null);
+    }
+  </script>
+</head>
+
+<body>
+  <span>From IP : </span>
+  <input type="text" id="fromIP" value="192.168.x.x"></input>
+  <span>To IP : </span>
+  <input type="text" id="toIP" value="192.168.x.x"></input>
+  <input type="button" onclick="httpGet()" value="COPY"></input>
+  <div id="log"></div>
+</body>
+
+</html>
